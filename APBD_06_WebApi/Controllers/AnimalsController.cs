@@ -7,30 +7,30 @@ namespace APBD_06_WebApi.Controllers
     // api/tests => [controller] = Tests
     [Route("api/[controller]")]
     [ApiController]
-    public class TestsController : ControllerBase
+    public class AnimalsController : ControllerBase
     {
         
         // GET api/tests
         [HttpGet]
         public IActionResult Get()
         {
-            var tests = Database.Tests;
-            return Ok(tests);
+            var animals = Database.Animals;
+            return Ok(animals);
         }
         
         // GET api/tests/{id}          
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {
-            var test = Database.Tests.FirstOrDefault(x => x.Id == id);
-            return Ok(test);
+            var animal = Database.Animals.FirstOrDefault(x => x.Id == id);
+            return Ok(animal);
         }
 
         // POST api/tests { "id": 4, "name": "Test4" }
         [HttpPost]
-        public IActionResult Add(Test test)
+        public IActionResult Add(Animal animal)
         {
-            Database.Tests.Add(test);
+            Database.Animals.Add(animal);
             return Created();
         }
     }
