@@ -4,13 +4,13 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace APBD_06_WebApi.Controllers
 {
-    // api/tests => [controller] = Tests
+    // api/animals => [controller] = Animals
     [Route("api/[controller]")]
     [ApiController]
     public class AnimalsController : ControllerBase
     {
         
-        // GET api/tests
+        // GET api/animals
         [HttpGet]
         public IActionResult Get()
         {
@@ -18,7 +18,7 @@ namespace APBD_06_WebApi.Controllers
             return Ok(animals);
         }
         
-        // GET api/tests/{id}          
+        // GET api/animals/{id}          
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {
@@ -26,7 +26,7 @@ namespace APBD_06_WebApi.Controllers
             return Ok(animal);
         }
 
-        // POST api/tests { "id": 4, "name": "Test4" }
+        // POST api/animals { "id": 4, "name": "Test4" }
         [HttpPost]
         public IActionResult Add(Animal animal)
         {
