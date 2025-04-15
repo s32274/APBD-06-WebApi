@@ -26,7 +26,7 @@ namespace APBD_06_WebApi.Controllers
             return Ok(animal);
         }
 
-        // POST api/animals { "id": 4, "name": "Test4" }
+        // POST api/animals { "id": 4, "name": "Tyrion", "type": "Pies", "mass": 5000, "furColour": "Golden" }
         [HttpPost]
         public IActionResult Add(Animal animal)
         {
